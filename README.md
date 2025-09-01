@@ -89,23 +89,23 @@ Cleaned data is saved to: `Scrapped Data/IMDB_Top250_Cleaned.csv`
 Visualizations are available in the repository (see the **Visualizations**). Common analyses include:
 
 ### ⭐ Rating Distribution
-![Rating Distribution](./Visualization/Rating Distribution.png)
+![Rating Distribution](Visualization/Rating_Distribution.png)
 
 ### 🎭 Movie Distribution
-![Count of Movie by Genre and Years](./Visualization/Count of Movie by Genre and Years.png)
+![Count of Movie by Genre and Years](Visualization/Count_of_Movie_by_Genre_Years.png)
 
 ### 🎬 Genre Wise Analysis
-![Genre wise Anaysis](./Visualization/Genre wise Anaysis.png)  
-![Genre wise Total Rating](./Visualization/Genre wise Total Rating.png)
+![Genre wise Anaysis](Visualization/Genre_wise_Anaysis.png)  
+![Genre wise Total Rating](Visualization/Genre_wise_Total_Rating.png)
 
 ### 🏆 Top 5 Movies by Rating
-![Top 5 Movies by Average Rating](./Visualization/Top 5 Movies by Average Rating.png)
+![Top 5 Movies by Average Rating](Visualization/Top_5_Movies_by_Average_Rating.png)
 
 ### 🏆 Top 5 Movies by Total Ratings
-![Top 5 Movies by Total number of Rating](./Visualization/Top 5 Movies by Total number of Rating.png)
+![Top 5 Movies by Total number of Rating](Visualization/Top_5_Movies_by_Total_number_of_Rating.png)
 
 ### 🎯 Top Movies from Each Category
-![Top Movie by Category](./Visualization/Top Movie by Category.png)
+![Top Movie by Category](Visualization/Top_Movie_by_Category.png)
 
 
 ---
