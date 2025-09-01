@@ -112,22 +112,37 @@ Visualizations are available in the repository (see the **Visualizations**). Com
 
 ## 📍 Insights Derived
 
-1. **Ratings Cluster at the Top End**  
-   Top 250 ratings tend to cluster above ~8.0, with a few outliers near 9.0+.
+1. **Release Year Trends**  
+   - Majority of the movies were released between 1970 and 2020.
+   - A clear exponential growth in movie releases after 1970 is observed.
 
-2. **Genre Concentration**  
-   Drama and Crime often dominate, with frequent combinations like **Drama–Crime**, **Drama–Thriller**, and **Drama–Romance**.
+2. **Duration Insights**  
+   - Most movies have a runtime between 1.5 to 2.5 hours.
+   - Sword & Sorcery films tend to be the longest, followed by horror, drama, sci-fi, and war genres.
 
-3. **Era Effects**  
-   Certain decades (e.g., 1990s–2000s) show dense representation, hinting at strong cinematic output.
+3. **Ratings Distribution**  
+   - Average ratings for most movies lie between 8.0 and 8.4.
+   - Highest-rated movies include:
+     - The Shawshank Redemption (9.3)
+     - The Godfather (9.2)
+     - The Dark Knight (9.1)
+     - The Godfather Part II (9.0)
+     - 12 Angry Men (9.0)
 
-4. **Runtime Sweet Spot**  
-   Many top films cluster between **120–150 minutes**; extremes exist but are less common.
 
-5. **Director Footprints**  
-   A handful of directors appear repeatedly; their averages typically remain high even with a higher film count.
+4. **Popularity by Number of Ratings**  
+   - Movies with the most audience engagement (number of votes):
+     - The Shawshank Redemption (~3.1M votes)
+     - The Dark Knight (~3.1M votes)
+     - Inception (~2.7M votes)
+     - Fight Club (~2.5M votes)
+     - Pulp Fiction (~2.4M votes)
 
-*(Your specific insights may vary based on the scrape and cleaning rules applied.)*
+
+5. **Genre Analysis**  
+   - Drama, Thriller, and War dominate in terms of movie count.
+   - Sword & Sorcery, Action, Comedy, History, and Sci-Fi stand out with higher average ratings.
+
 
 ---
 
