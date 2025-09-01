@@ -27,15 +27,14 @@ Movie recommendation and catalog systems benefit from clean, reliable metadata. 
 
 1. [Project Overview](#project-overview)  
 2. [Tech Stack](#tech-stack)  
-3. [How to Run](#how-to-run)  
-4. [Data Understanding](#data-understanding)  
-5. [Data Cleaning](#data-cleaning)  
-6. [Exploratory Data Analysis (EDA)](#eda)  
-7. [Insights Derived](#insights-derived)  
-8. [Challenges Faced](#challenges-faced)  
-9. [Future Scope](#future-scope)  
-10. [Final Outcome](#final-outcome)  
-11. [Project Credits](#project-credits)
+3. [Data Understanding](#data-understanding)  
+4. [Data Cleaning](#data-cleaning)  
+5. [Exploratory Data Analysis (EDA)](#eda)  
+6. [Insights Derived](#insights-derived)  
+7. [Challenges Faced](#challenges-faced)  
+8. [Future Scope](#future-scope)  
+9. [Final Outcome](#final-outcome)  
+10. [Project Credits](#project-credits)
 
 ---
 
@@ -59,60 +58,17 @@ We collected and analyzed metadata for the **Top 250 movies on IMDb**, focusing 
 
 ---
 
-## ▶️ How to Run
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Rohitsharma-11/IMDB-Top-250-Movies-Analysis-Web-Scrapping-and-EDA.git
-   cd IMDB-Top-250-Movies-Analysis-Web-Scrapping-and-EDA
-   ```
-
-2. **Create & activate a virtual environment (recommended)**
-   ```bash
-   python -m venv .venv
-   # Windows
-   .venv\Scripts\activate
-   # macOS/Linux
-   source .venv/bin/activate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the scraper (Selenium-based for dynamic content)**
-   ```bash
-   python src/scrape_imdb_top250_selenium.py
-   ```
-
-5. **Run the BeautifulSoup (static) fallback (if needed)**
-   ```bash
-   python src/scrape_imdb_top250_bs4.py
-   ```
-
-6. **Open the EDA notebook**
-   ```bash
-   jupyter notebook notebooks/EDA_IMDb_Top250.ipynb
-   ```
-
-> **Note:** Make sure the appropriate **WebDriver** (e.g., ChromeDriver) is installed and on your PATH. For dynamic panels (like genres) and infinite/paginated sections, Selenium is used to render and interact with the page.
-
----
-
 ## 🧾 Data Understanding
 
 Typical fields collected (subject to page structure):
 - `title`, `year`, `rating`, `rank`
 - `genre` (single or multiple)
 - `duration` (runtime in minutes)
-- `director`, `cast_top`
-- `votes`, `metascore` (if available)
-- `certificate` / `content_rating` (if available)
-- `url` (movie page)
+- `average_rating`
+- 'total number of rating'
 
-Raw data is saved to: `data/raw/imdb_top250_raw.csv`  
-Cleaned data is saved to: `data/processed/imdb_top250_clean.csv`
+Raw data is saved to: `Scrapped Data/IMDB_top250.csv`  
+Cleaned data is saved to: `Scrapped Data/IMDB_Top250_Cleaned.csv`
 
 ---
 
@@ -124,36 +80,36 @@ Cleaned data is saved to: `data/processed/imdb_top250_clean.csv`
 - **Duplicates & nulls**: drop duplicates, fill or drop nulls where appropriate
 - **Derived columns**:
   - `decade` (e.g., 1990s, 2000s)
-  - `primary_genre` (first listed genre)
   - `title_clean` (stripped/pattern-cleaned title)
 
 ---
 
 ## 📊 EDA
 
-Visualizations are available in the repository (see the **Images** or **Plots** folder, or the EDA notebook). Common analyses include:
+Visualizations are available in the repository (see the **Visualizations**). Common analyses include:
 
 ### ⭐ Rating Distribution
-- Histogram/KDE of IMDb ratings across the Top 250.
+![Rating Distribution](Visualization/Rating Distribution.png)
 
-### 🎭 Genre Landscape
-- Top genres and frequent multi-genre combinations.
-- Share of movies by primary genre.
+### 🎭 Movie Distribution
+![Movie Distribution](Visualization/Count of Movie by Genre and Years.png)
 
-### ⏱️ Runtime Patterns
-- Distribution of runtimes; long vs short movies in the Top 250.
+### ⏱️ Genre Wise Analysis
+![Genre Wise Analysis](Visualization/Genre wise Anaysis.png)
+![Genre Wise Analysis](Visualization/Genre wise Total Rating.png)
 
-### 🗓️ Decade Trends
-- Count of movies per decade; golden eras of cinema.
+### 🎬 Top 5 Movies by Rating
+![Top 5 Movies by Rating](Visualization/Top 5 Movies by Average Rating.png)
 
-### 🎬 Directors & Contributors
-- Most frequent directors in the list.
-- Average rating by director (min movie count threshold).
+### 🎬 Top 5 Movies by Total Ratings
+![Top 5 Movies by Total Ratings](Visualization/Top 5 Movies by Total number of Rating.png)
 
-### 🌍 Country/Language (if scraped)
-- Distribution by production country/language (where available).
+### 🎬 Top Movies from Each Category
+![Top Movies from Each Category](Visualization/Top Movie by Category.png)
 
-> **Note:** Plots are exported from the EDA notebook to the repository. Check the `Images/` or `Plots/` directory.
+### 🌍 Correlation Matrix
+![Correlation Matrix](Visualization/Correlation Matrix.png)
+
 
 ---
 
@@ -183,7 +139,6 @@ Visualizations are available in the repository (see the **Images** or **Plots** 
 - **Pagination & partial listing**: Initial attempts only returned the first 25 titles; addressed by identifying page/offset parameters or iterating over dynamic loads.
 - **Dynamic content for genres & details**: Some attributes revealed only after interactions (e.g., expanding a panel). **Selenium** was used to render and interact with these elements.
 - **Anti-bot/403 issues**: Added appropriate headers, delays, and error-handling; switched to Selenium where necessary.
-- **HTML structure changes**: Wrote resilient selectors (CSS/XPath) and fallback logic.
 
 ---
 
