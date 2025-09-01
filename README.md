@@ -92,20 +92,20 @@ Visualizations are available in the repository (see the **Visualizations**). Com
 ![Rating Distribution](./Visualization/Rating Distribution.png)
 
 ### 🎭 Movie Distribution
-![Movie Distribution](./Visualization/Count of Movie by Genre and Years.png)
+![Count of Movie by Genre and Years](./Visualization/Count of Movie by Genre and Years.png)
 
 ### 🎬 Genre Wise Analysis
-![Genre Wise Analysis](./Visualization/Genre wise Anaysis.png)  
-![Genre Wise Total Rating](./Visualization/Genre wise Total Rating.png)
+![Genre wise Anaysis](./Visualization/Genre wise Anaysis.png)  
+![Genre wise Total Rating](./Visualization/Genre wise Total Rating.png)
 
 ### 🏆 Top 5 Movies by Rating
-![Top 5 Movies by Rating](./Visualization/Top 5 Movies by Average Rating.png)
+![Top 5 Movies by Average Rating](./Visualization/Top 5 Movies by Average Rating.png)
 
 ### 🏆 Top 5 Movies by Total Ratings
-![Top 5 Movies by Total Ratings](./Visualization/Top 5 Movies by Total number of Rating.png)
+![Top 5 Movies by Total number of Rating](./Visualization/Top 5 Movies by Total number of Rating.png)
 
 ### 🎯 Top Movies from Each Category
-![Top Movies from Each Category](./Visualization/Top Movie by Category.png)
+![Top Movie by Category](./Visualization/Top Movie by Category.png)
 
 
 ---
